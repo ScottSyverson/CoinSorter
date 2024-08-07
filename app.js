@@ -1,3 +1,7 @@
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
 
 let pennies = 103;
 let penniesRoll = 0;
@@ -31,7 +35,7 @@ while (pennies > 50){
 }
 console.log(pennies + " unrolled pennies.");
 console.log(penniesRoll + " rolls of pennies." );
-console.log("Dollar amount of pennies: " + totalPenniesValue);
+console.log("Dollar amount of pennies: " + formatter.format(totalPenniesValue));
 
 while (nickels > 40){
     nickels = nickels -40;
@@ -39,7 +43,7 @@ while (nickels > 40){
 }
 console.log(nickels + " unrolled nickels.");
 console.log(nickelsRoll + " rolls of nickels." );
-console.log("Dollar amount of nickels: " + totalNickelsValue);
+console.log("Dollar amount of nickels: " + formatter.format(totalNickelsValue));
 
 while (dimes > 50){
     dimes = dimes -50;
@@ -47,7 +51,7 @@ while (dimes > 50){
 }
 console.log(dimes + " unrolled dimes.");
 console.log(dimesRoll + " rolls of dimes." );
-console.log("Dollar amount of dimes: " + totalDimesValue);
+console.log("Dollar amount of dimes: " + formatter.format(totalDimesValue));
 
 while (quarters > 50){
     quarters = quarters -40;
@@ -55,7 +59,7 @@ while (quarters > 50){
 }
 console.log(quarters + " unrolled quarters.");
 console.log(quartersRoll + " rolls of quarters." );
-console.log("Dollar amount of quarters: " + totalQuartersValue);
+console.log("Dollar amount of quarters: " + formatter.format(totalQuartersValue));
 
-console.log("Total coin amount: " + totalChange.toFixed(2));
+console.log("Total coin amount: " + formatter.format(totalChange));
 
