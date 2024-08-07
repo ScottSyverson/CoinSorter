@@ -53,7 +53,7 @@ console.log(dimesRoll + " rolls of dimes." );
 console.log(dimes + " unrolled dimes.");
 console.log("Dollar amount of dimes: " + formatter.format(totalDimesValue));
 
-while (quarters > 50){
+while (quarters > 40){
     quarters = quarters -40;
     quartersRoll ++;
 }
